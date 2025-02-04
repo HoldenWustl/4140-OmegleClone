@@ -38,7 +38,7 @@ const VideoStreaming = (props) => {
   
 
     useEffect(() => {
-        socketRef.current = io.connect("http://localhost:3001/");
+        socketRef.current = io.connect("https://four140-omegleclone-backend.onrender.com/");
       
         const handleBeforeUnload = () => {
           setAllUsers([])
@@ -218,7 +218,7 @@ const VideoStreaming = (props) => {
         reported_name: selectedUser
       };
     
-      const ReportSubmission = await fetch("http://localhost:3001/report", {
+      const ReportSubmission = await fetch("https://four140-omegleclone-backend.onrender.com/report", {
         method: "POST",
         headers: {
           "Content-type": "application/json"
