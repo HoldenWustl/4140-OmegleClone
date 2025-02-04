@@ -27,7 +27,7 @@ const TextChat = memo((props) => {
   const [otherReason, setOtherReason] = useState("");
 
   useEffect(() => {
-    socketRef.current = io('http://localhost:3001'); 
+    socketRef.current = io('https://four140-omegleclone-backend.onrender.com'); 
   }, )
 
   useEffect(() => {
@@ -188,7 +188,7 @@ const TextChat = memo((props) => {
       reported_name: selectedUser
     };
   
-    const ReportSubmission = await fetch("http://localhost:3001/report", {
+    const ReportSubmission = await fetch("https://four140-omegleclone-backend.onrender.com/report", {
       method: "POST",
       headers: {
         "Content-type": "application/json"
