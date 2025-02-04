@@ -21,7 +21,7 @@ function Login() {
           if (jwtCookie) {
             try {
               const jwtToken = jwtCookie.split('=')[1];
-              const res = await fetch('http://localhost:3001/protected', {
+              const res = await fetch('https://four140-omegleclone-backend.onrender.com/protected', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ function Login() {
             userID: userID,
         };
     
-        const auth = await fetch('http://localhost:3001/login', {
+        const auth = await fetch('https://four140-omegleclone-backend.onrender.com/login', {
             method: 'POST',
             headers: {
                 "Content-type": "application/json"
