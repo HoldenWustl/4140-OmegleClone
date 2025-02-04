@@ -25,7 +25,7 @@ const Register = () => {
       username: username,
     };
 
-    const newUserID = await fetch("http://localhost:3001/register", {
+    const newUserID = await fetch("https://four140-omegleclone-backend.onrender.com/register", {
       method: "POST",
       headers: {
         "Content-type": "application/json"
